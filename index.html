@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Website Performance Metrics Analysis</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#f4f7fc;
+color:#222;
+line-height:1.6;
+}
+
+header{
+background:linear-gradient(135deg,#0d6efd,#6610f2);
+color:white;
+text-align:center;
+padding:40px 20px;
+}
+
+header h1{
+font-size:34px;
+margin-bottom:10px;
+}
+
+header p{
+font-size:20px;
+font-weight:bold;
+}
+
+.container{
+width:90%;
+max-width:1300px;
+margin:auto;
+padding:30px 0;
+}
+
+.card{
+background:white;
+padding:25px;
+margin-bottom:22px;
+border-radius:14px;
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-4px);
+}
+
+.card h2{
+color:#0d6efd;
+margin-bottom:15px;
+border-left:5px solid #0d6efd;
+padding-left:12px;
+}
+
+ul{
+padding-left:22px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:15px;
+}
+
+table,th,td{
+border:1px solid #ddd;
+}
+
+th,td{
+padding:12px;
+text-align:center;
+}
+
+th{
+background:#0d6efd;
+color:white;
+}
+
+.output{
+background:#111;
+color:#00ff7f;
+padding:18px;
+border-radius:10px;
+font-family:Consolas, monospace;
+white-space:pre-wrap;
+margin-top:15px;
+overflow-x:auto;
+}
+
+.success{
+color:green;
+font-weight:bold;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:30px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Statistical Analysis of Website Performance Metrics</h1>
+<p>For Cloud Infrastructure Optimization</p>
+</header>
+
+<div class="container">
+
+<!-- Objective -->
+
+<div class="card">
+<h2>📌 Project Objective</h2>
+<p>
+To analyze website performance metrics using Python, statistics, and hypothesis testing
+to understand real cloud infrastructure optimization techniques such as load balancing,
+auto scaling, monitoring, and user experience enhancement.
+</p>
+</div>
+
+<!-- Dataset -->
+
+<div class="card">
+<h2>📂 Dataset Details</h2>
+
+<table>
+<tr>
+<th>Total Rows</th>
+<th>Total Columns</th>
+<th>File Type</th>
+</tr>
+
+<tr>
+<td>734</td>
+<td>9</td>
+<td>CSV</td>
+</tr>
+</table>
+
+<br>
+
+<table>
+<tr><th>Column Names</th></tr>
+<tr><td>Sr No</td></tr>
+<tr><td>website_url</td></tr>
+<tr><td>Category</td></tr>
+<tr><td>Page Size (KB)</td></tr>
+<tr><td>Load Time(s)</td></tr>
+<tr><td>Response Time(s)</td></tr>
+<tr><td>Throughput</td></tr>
+<tr><td>Performance_Label</td></tr>
+<tr><td>User Response</td></tr>
+</table>
+</div>
+
+<!-- Files -->
+
+<div class="card">
+<h2>⚙️ Python Files Used</h2>
+<ul>
+<li>1_load_data.py</li>
+<li>2_clean_data.py</li>
+<li>3_statistics.py</li>
+<li>4_visualization.py</li>
+<li>5_hypothesis_test1.py</li>
+<li>6_hypothesis_test2.py</li>
+<li>7_final_report.py</li>
+</ul>
+</div>
+
+<!-- File 1 -->
+
+<div class="card">
+<h2>📄 Output: 1_load_data.py</h2>
+
+<div class="output">
+Dataset Loaded Successfully
+
+Rows = 734
+Columns = 9
+
+Dataset Preview Displayed Successfully.
+</div>
+</div>
+
+<!-- File 2 -->
+
+<div class="card">
+<h2>🧹 Output: 2_clean_data.py</h2>
+
+<div class="output">
+Before Cleaning: (734, 9)
+After Cleaning:  (733, 9)
+
+1 duplicate row removed successfully.
+No major null values found.
+</div>
+
+<p class="success">✔ Dataset cleaned successfully.</p>
+
+</div>
+
+<!-- File 3 -->
+
+<div class="card">
+<h2>📊 Output: 3_statistics.py</h2>
+
+<table>
+<tr>
+<th>Metric</th>
+<th>Load Time(s)</th>
+<th>Response Time(s)</th>
+<th>Throughput</th>
+</tr>
+
+<tr>
+<td>Count</td>
+<td>733</td>
+<td>733</td>
+<td>733</td>
+</tr>
+
+<tr>
+<td>Mean</td>
+<td>1.786</td>
+<td>1.013</td>
+<td>317.69</td>
+</tr>
+
+<tr>
+<td>Median</td>
+<td>1.38</td>
+<td>0.599</td>
+<td>97.30</td>
+</tr>
+
+<tr>
+<td>Max</td>
+<td>7.94</td>
+<td>7.419</td>
+<td>15227.28</td>
+</tr>
+
+</table>
+
+<p class="success">✔ Descriptive statistics completed.</p>
+
+</div>
+
+<!-- File 4 -->
+
+<div class="card">
+<h2>📈 Output: 4_visualization.py</h2>
+
+<h3>Load Time Distribution</h3>
+<img src="graph1.png" width="100%">
+
+<br><br>
+
+<h3>Average Throughput by Performance</h3>
+<img src="graph2.png" width="100%">
+
+<br><br>
+
+<h3>Performance Label Distribution</h3>
+<img src="graph3.png" width="70%">
+
+<p class="success">✔ Graphs generated successfully.</p>
+
+</div>
+
+<!-- File 5 -->
+
+<div class="card">
+<h2>🧪 Output: 5_hypothesis_test1.py (T-Test)</h2>
+
+<div class="output">
+T-Test Result
+
+p-value = 0.0006324177
+
+Significant difference in Load Time
+between Fast and Slow websites.
+</div>
+
+<p>
+<b>Interpretation:</b> Fast and Slow websites have statistically different loading times.
+This helps cloud engineers optimize performance.
+</p>
+
+</div>
+
+<!-- File 6 -->
+
+<div class="card">
+<h2>🧪 Output: 6_hypothesis_test2.py (Chi-Square)</h2>
+
+<div class="output">
+Chi-Square Test
+
+p-value = 0.0061168945
+
+Category and Performance are related.
+</div>
+
+<p>
+<b>Interpretation:</b> Website category (Travel, Ecommerce etc.)
+has impact on performance behavior.
+</p>
+
+</div>
+
+<!-- Cloud -->
+
+<div class="card">
+<h2>☁️ Real Cloud Computing Cases Used</h2>
+
+<table>
+<tr>
+<th>Experiment Metric</th>
+<th>Real Cloud Use Case</th>
+</tr>
+
+<tr>
+<td>Load Time</td>
+<td>Auto Scaling Decisions</td>
+</tr>
+
+<tr>
+<td>Response Time</td>
+<td>Latency Monitoring</td>
+</tr>
+
+<tr>
+<td>Throughput</td>
+<td>Load Balancer Traffic Analysis</td>
+</tr>
+
+<tr>
+<td>Performance_Label</td>
+<td>SLA Monitoring</td>
+</tr>
+
+<tr>
+<td>Category</td>
+<td>Capacity Planning</td>
+</tr>
+
+</table>
+
+</div>
+
+<!-- Final -->
+
+<div class="card">
+<h2>✅ Final Conclusion</h2>
+
+<p>
+This project successfully analyzed a real website performance dataset using Python.
+The data was cleaned, summarized, visualized, and tested statistically.
+T-Test confirmed performance differences between Fast and Slow websites.
+Chi-Square proved website category affects performance.
+
+These findings are directly useful in real cloud computing systems for:
+
+</p>
+
+<ul>
+<li>Auto Scaling</li>
+<li>Load Balancing</li>
+<li>Monitoring</li>
+<li>CDN Optimization</li>
+<li>User Experience Improvement</li>
+<li>Server Resource Optimization</li>
+</ul>
+
+</div>
+
+</div>
+
+<footer>
+Created by Python + HTML + CSS | Cloud Statistics Project Dashboard
+</footer>
+
+</body>
+</html>
