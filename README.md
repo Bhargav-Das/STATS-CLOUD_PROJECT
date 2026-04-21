@@ -106,9 +106,9 @@ Calculated:
 - Standard Deviation
 - Minimum / Maximum
 - Metric	Load Time	Response Time	Throughput
-Mean	1.786	1.013	317.69
-Median	1.38	0.599	97.30
-Max	7.94	7.419	15227
+- Mean	1.786	1.013	317.69
+- Median	1.38	0.599	97.30
+- Max	7.94	7.419	15227
 
 ## 4️⃣ Visualization
 
