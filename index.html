@@ -7,7 +7,6 @@
 <title>Website Performance Metrics Analysis</title>
 
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -34,13 +33,13 @@ margin-bottom:10px;
 }
 
 header p{
-font-size:20px;
+font-size:18px;
 font-weight:bold;
 }
 
 .container{
 width:90%;
-max-width:1300px;
+max-width:1350px;
 margin:auto;
 padding:30px 0;
 }
@@ -67,6 +66,7 @@ padding-left:12px;
 
 ul{
 padding-left:22px;
+margin-top:10px;
 }
 
 table{
@@ -103,6 +103,13 @@ overflow-x:auto;
 .success{
 color:green;
 font-weight:bold;
+margin-top:10px;
+}
+
+img{
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+margin-top:10px;
 }
 
 footer{
@@ -112,7 +119,6 @@ text-align:center;
 padding:20px;
 margin-top:30px;
 }
-
 </style>
 </head>
 
@@ -120,7 +126,7 @@ margin-top:30px;
 
 <header>
 <h1>Statistical Analysis of Website Performance Metrics</h1>
-<p>For Cloud Infrastructure Optimization</p>
+<p>Cloud Infrastructure Optimization using Python & Hypothesis Testing</p>
 </header>
 
 <div class="container">
@@ -130,9 +136,11 @@ margin-top:30px;
 <div class="card">
 <h2>📌 Project Objective</h2>
 <p>
-To analyze website performance metrics using Python, statistics, and hypothesis testing
-to understand real cloud infrastructure optimization techniques such as load balancing,
-auto scaling, monitoring, and user experience enhancement.
+To analyze website performance metrics using Python libraries like Pandas,
+Matplotlib, and SciPy. This project identifies patterns in website speed,
+throughput, response time, and category performance to support real cloud
+optimization decisions such as auto scaling, monitoring, SLA management,
+and user experience enhancement.
 </p>
 </div>
 
@@ -145,12 +153,14 @@ auto scaling, monitoring, and user experience enhancement.
 <tr>
 <th>Total Rows</th>
 <th>Total Columns</th>
+<th>File Name</th>
 <th>File Type</th>
 </tr>
 
 <tr>
 <td>734</td>
 <td>9</td>
+<td>labeled_dataset.csv</td>
 <td>CSV</td>
 </tr>
 </table>
@@ -171,57 +181,66 @@ auto scaling, monitoring, and user experience enhancement.
 </table>
 </div>
 
-<!-- Files -->
+<!-- Python Workflow -->
 
 <div class="card">
-<h2>⚙️ Python Files Used</h2>
+<h2>⚙️ Python Workflow Used</h2>
+
 <ul>
-<li>1_load_data.py</li>
-<li>2_clean_data.py</li>
-<li>3_statistics.py</li>
-<li>4_visualization.py</li>
-<li>5_hypothesis_test1.py</li>
-<li>6_hypothesis_test2.py</li>
-<li>7_final_report.py</li>
+<li>Load dataset using Pandas</li>
+<li>Clean duplicate & null values</li>
+<li>Standardize text labels</li>
+<li>Generate descriptive statistics</li>
+<li>Create visualizations</li>
+<li>Perform T-Test</li>
+<li>Perform ANOVA</li>
+<li>Perform Chi-Square Test</li>
 </ul>
 </div>
 
-<!-- File 1 -->
+<!-- Step 1 -->
 
 <div class="card">
-<h2>📄 Output: 1_load_data.py</h2>
+<h2>📄 STEP 1: Load Dataset</h2>
 
 <div class="output">
 Dataset Loaded Successfully
 
-Rows = 734
-Columns = 9
+First 5 Rows Displayed
+Columns:
+['Sr No','website_url','Category','Page Size (KB)',
+'Load Time(s)','Response Time(s)',
+'Throughput','Performance_Label','User Response']
 
-Dataset Preview Displayed Successfully.
-</div>
+Shape: (734, 9)
 </div>
 
-<!-- File 2 -->
+</div>
+
+<!-- Step 2 -->
 
 <div class="card">
-<h2>🧹 Output: 2_clean_data.py</h2>
+<h2>🧹 STEP 2: Clean Dataset</h2>
 
 <div class="output">
-Before Cleaning: (734, 9)
-After Cleaning:  (733, 9)
+Before Cleaning : (734, 9)
 
-1 duplicate row removed successfully.
-No major null values found.
+drop_duplicates()
+dropna()
+
+After Cleaning  : (733, 9)
+
+Performance_Label standardized
+Category column cleaned
 </div>
 
 <p class="success">✔ Dataset cleaned successfully.</p>
-
 </div>
 
-<!-- File 3 -->
+<!-- Step 3 -->
 
 <div class="card">
-<h2>📊 Output: 3_statistics.py</h2>
+<h2>📊 STEP 3: Descriptive Statistics</h2>
 
 <table>
 <tr>
@@ -261,82 +280,88 @@ No major null values found.
 
 </table>
 
-<p class="success">✔ Descriptive statistics completed.</p>
-
+<p class="success">✔ Statistical summary generated.</p>
 </div>
 
-<!-- File 4 -->
+<!-- Step 4 -->
 
 <div class="card">
-<h2>📈 Output: 4_visualization.py</h2>
+<h2>📈 STEP 4: Visualizations</h2>
 
-<h3>Load Time Distribution</h3>
+<h3>1. Load Time Distribution</h3>
 <img src="graph1.png" width="100%">
 
 <br><br>
 
-<h3>Average Throughput by Performance</h3>
+<h3>2. Average Throughput by Performance Label</h3>
 <img src="graph2.png" width="100%">
 
 <br><br>
 
-<h3>Performance Label Distribution</h3>
+<h3>3. Performance Label Distribution</h3>
 <img src="graph3.png" width="70%">
 
 <p class="success">✔ Graphs generated successfully.</p>
-
 </div>
 
-<!-- File 5 -->
+<!-- Step 5 -->
 
 <div class="card">
-<h2>🧪 Output: 5_hypothesis_test1.py (T-Test)</h2>
+<h2>🧪 STEP 5: Hypothesis Test 1</h2>
 
 <div class="output">
-T-Test Result
+T-Test: Fast vs Slow Load Time
 
-p-value = 0.0006324177
+p-value = 0.000632
 
+Result:
 Significant difference in Load Time
 between Fast and Slow websites.
+
+ANOVA:
+p-value < 0.05
+
+Significant difference across
+Fast, Medium and Slow groups.
 </div>
 
 <p>
-<b>Interpretation:</b> Fast and Slow websites have statistically different loading times.
-This helps cloud engineers optimize performance.
+<b>Interpretation:</b> Website speed categories differ significantly.
+This helps cloud teams identify slow services and optimize resources.
 </p>
-
 </div>
 
-<!-- File 6 -->
+<!-- Step 6 -->
 
 <div class="card">
-<h2>🧪 Output: 6_hypothesis_test2.py (Chi-Square)</h2>
+<h2>🧪 STEP 6: Hypothesis Test 2</h2>
 
 <div class="output">
-Chi-Square Test
+Chi-Square Test:
+Category vs Performance Label
 
-p-value = 0.0061168945
+p-value = 0.006116
 
-Category and Performance are related.
+Result:
+Category and Performance Label
+are significantly related.
 </div>
 
 <p>
-<b>Interpretation:</b> Website category (Travel, Ecommerce etc.)
-has impact on performance behavior.
+<b>Interpretation:</b> Website type (E-commerce, Travel, Media etc.)
+influences performance behavior.
 </p>
-
 </div>
 
 <!-- Cloud -->
 
 <div class="card">
-<h2>☁️ Real Cloud Computing Cases Used</h2>
+<h2>☁️ Real Cloud Computing Use Cases</h2>
 
 <table>
 <tr>
-<th>Experiment Metric</th>
-<th>Real Cloud Use Case</th>
+<th>Metric</th>
+<th>Cloud Use Case</th>
 </tr>
 
 <tr>
@@ -351,7 +376,7 @@ has impact on performance behavior.
 
 <tr>
 <td>Throughput</td>
-<td>Load Balancer Traffic Analysis</td>
+<td>Load Balancer Analysis</td>
 </tr>
 
 <tr>
@@ -363,33 +388,28 @@ has impact on performance behavior.
 <td>Category</td>
 <td>Capacity Planning</td>
 </tr>
-
 </table>
 
 </div>
 
-<!-- Final -->
+<!-- Conclusion -->
 
 <div class="card">
 <h2>✅ Final Conclusion</h2>
 
 <p>
-This project successfully analyzed a real website performance dataset using Python.
-The data was cleaned, summarized, visualized, and tested statistically.
-T-Test confirmed performance differences between Fast and Slow websites.
-Chi-Square proved website category affects performance.
-
-These findings are directly useful in real cloud computing systems for:
-
+This project successfully performed end-to-end statistical analysis
+on a website performance dataset using Python.
+The dataset was cleaned, visualized, and tested using
+T-Test, ANOVA, and Chi-Square methods.
 </p>
 
 <ul>
-<li>Auto Scaling</li>
-<li>Load Balancing</li>
-<li>Monitoring</li>
-<li>CDN Optimization</li>
-<li>User Experience Improvement</li>
-<li>Server Resource Optimization</li>
+<li>Fast and Slow websites differ significantly</li>
+<li>All performance groups show meaningful variation</li>
+<li>Website category affects speed behavior</li>
+<li>Useful for cloud optimization decisions</li>
+<li>Improves user experience and system efficiency</li>
 </ul>
 
 </div>
@@ -397,7 +417,7 @@ These findings are directly useful in real cloud computing systems for:
 </div>
 
 <footer>
-Created by Python + HTML + CSS | Cloud Statistics Project Dashboard
+Created using Python + HTML + CSS | Cloud Statistics Dashboard
 </footer>
 
 </body>
