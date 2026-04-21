@@ -2,7 +2,7 @@
 
 🔗 Project Repository: [Click Here to View Repo](https://github.com/Bhargav-Das/STATS-CLOUD_PROJECT)
 
-🌐 Dashboard: [Live Local Dashboard](http://127.0.0.1:5500/index.html)
+🌐 Dashboard: [Live Local Dashboard](https://bhargav-das.github.io/STATS-CLOUD_PROJECT/)
 
 ---
 
