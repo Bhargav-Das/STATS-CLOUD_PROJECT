@@ -59,23 +59,19 @@ Dataset contains **734 rows** and **9 columns**.
 
 ---
 
-## 📁 Project Structure
+## 📁 Python Workflow Used
 
 ```bash
 Stats_Cloud_Project/
-│── labeled_dataset.csv
-│── 1_load_data.py
-│── 2_clean_data.py
-│── 3_statistics.py
-│── 4_visualization.py
-│── 5_hypothesis_test1.py
-│── 6_hypothesis_test2.py
-│── 7_final_report.py
-│── graph1.png
-│── graph2.png
-│── graph3.png
-│── index.html
-│── README.md
+│── Load dataset using Pandas
+│── Clean duplicate & null values
+│── Standardize text labels
+│── Generate descriptive statistics
+│── Create visualizations
+│── Perform T-Test
+│── Perform ANOVA
+│── Perform Chi-Square Test
+
 ```
 ## ⚙️ Workflow
 
